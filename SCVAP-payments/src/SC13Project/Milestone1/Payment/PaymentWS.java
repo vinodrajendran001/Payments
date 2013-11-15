@@ -1,5 +1,9 @@
 package SC13Project.Milestone1.Payment;
 
+import java.io.FileNotFoundException;
+
+import javax.xml.bind.JAXBException;
+
 //Please do not change the name of the package or this interface
 public interface PaymentWS {
 
@@ -7,10 +11,12 @@ public interface PaymentWS {
 	 * Query the balance of an account
 	 * @param accountID 
 	 * @return balance of the account
+	 * @throws JAXBException 
+	 * @throws FileNotFoundException 
 	 * 
 	 * 
 	 */
-	public int queryAccount(String accountID);
+	public int queryAccount(String accountID) throws JAXBException, FileNotFoundException;
 	
 	/**
 	 * Transfer money from account1 to account2
